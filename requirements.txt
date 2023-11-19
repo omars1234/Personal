@@ -1,4 +1,7 @@
 pandas
 numpy
 seaborn
+matplotlib
+plotly
+datetime
 -e .                ## will automaticaly trigger setup.py

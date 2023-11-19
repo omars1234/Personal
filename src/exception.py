@@ -20,10 +20,6 @@ logging.basicConfig(
 )
 
 
-
-
-
-
 def error_message_detail(error,error_detail:sys):
     _,_,exc_tab=error_detail.exc_info()    ## will tell all information about theexeption , like which file and whih line it occured
     file_name=exc_tab.tb_frame.f_code.co_filename
@@ -43,11 +39,12 @@ class CustomException(Exception):
         return self.error_message   
     
 
-if __name__=="__main__":
+'''if __name__=="__main__":
      
      try:
         a=1/0
      except Exception as e:
         logging.info("Divide by zero")
         raise CustomException (e,sys)
+        '''
             
