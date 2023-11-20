@@ -9,7 +9,7 @@ from dataclasses import dataclass
 @dataclass                                   # this is called decorater , 
 class DataIngestionConfig:  
     '''
-    when ever we have input data we use DataIngestionConfig
+    when ever we have input data we use DataIngestionConfig 
     '''
     train_data_path:str=os.path.join("artifacts","train.csv")
     test_data_path:str=os.path.join("artifacts","test.csv")
@@ -48,7 +48,7 @@ class DataIngestion:
 
 
 if __name__=="__main__":
-    obj=DataIngestion
+    obj=DataIngestion()
     obj.initiate_data_ingestion()
 
 

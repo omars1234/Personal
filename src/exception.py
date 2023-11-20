@@ -1,23 +1,11 @@
+
 import sys
 import os
 import logging
-'''
-The sys module in Python provides various functions and variables that are used to manipulate different parts of the Python runtime environment. It allows operating on the interpreter as it provides access to the variables and functions that interact strongly with the interpreter.
-'''
-from datetime import datetime
 
-LOG_FILE=f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
-logs_path=os.path.join(os.getcwd(),"logs",LOG_FILE) # getcwd CORRENT WORKING DIRECTORY
-os.makedirs(logs_path,exist_ok=True)
+from src.logger import logging
 
-LOG_FILE_PATH=os.path.join(logs_path,LOG_FILE)
-
-logging.basicConfig(
-    filename=LOG_FILE_PATH,
-    format="[ %(asctime)s] %(lineno)d %(name)s - %(levelname)s - %(message)s",
-    level=logging.INFO
-
-)
+# The sys module in Python provides various functions and variables that are used to manipulate different parts of the Python runtime environment. It allows operating on the interpreter as it provides access to the variables and functions that interact strongly with the interpreter.
 
 
 def error_message_detail(error,error_detail:sys):
@@ -37,14 +25,7 @@ class CustomException(Exception):
 
     def __str__(self):
         return self.error_message   
-    
-
-'''if __name__=="__main__":
-     
-     try:
-        a=1/0
-     except Exception as e:
-        logging.info("Divide by zero")
-        raise CustomException (e,sys)
-        '''
+      
+ 
+        
             
